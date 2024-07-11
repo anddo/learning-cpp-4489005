@@ -3,6 +3,7 @@
  */
 #include <thread>
 #include <chrono>
+#include <iostream>
 
 bool chopping = true;
 
@@ -11,8 +12,8 @@ void vegetable_chopper(const char* name) {
     while (chopping) {
         vegetable_count++;
     }
-    printf("%s chopped %u vegetables.\n", name, vegetable_count);
-#include <iostream> 
+    std::string result = std::string(name) + " chopped " + std::to_string(vegetable_count) + " vegetables.\n";
+    std::cout << result;
 }
 
 int main() {
