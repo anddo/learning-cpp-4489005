@@ -3,6 +3,8 @@
  */
 #include <thread>
 #include <atomic>
+#include <string>
+#include <iostream>
 
 std::atomic<unsigned int> garlic_count(0);
 
@@ -18,4 +20,6 @@ int main() {
     barron.join();
     olivia.join();
     printf("We should buy %u garlic.\n", garlic_count.load());
+    std::cout << "We should buy " << std::to_string(garlic_count.load()) << " garlic.\n";
+
 }

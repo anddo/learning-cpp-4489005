@@ -2,6 +2,7 @@
  * Two shoppers adding items to a shared notepad
  */
 #include <thread>
+#include <string>
 
 unsigned int garlic_count = 0;
 

@@ -2,6 +2,8 @@
  * Two shoppers adding items to a shared notepad
  */
 #include <thread>
+#include <string>
+#include <iostream>
 
 unsigned int garlic_count = 0;
 
@@ -16,5 +18,6 @@ int main() {
     std::thread olivia(shopper);
     barron.join();
     olivia.join();
-    printf("We should buy %u garlic.\n", garlic_count);
+    std::string printOut = "We should buy " + std::to_string(garlic_count) + " garlic.\n";
+    std::cout << printOut;
 }
