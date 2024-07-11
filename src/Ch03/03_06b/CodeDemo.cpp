@@ -7,6 +7,15 @@
 
 int main(){
 
-    std::cout << std::endl << std::endl;
+int a = 45;
+int* ptr;
+ptr = &a;
+
+
+    std::cout << "a: " << a << std::endl;
+    std::cout << "ptr: " << ptr << std::endl;
+    std::cout << "&a: " << &a << std::endl;
+    std::cout << "*ptr: " << *ptr << std::endl;
+    std::cout << "&ptr: " << &ptr << std::endl;
     return (0);
 }

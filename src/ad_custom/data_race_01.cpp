@@ -7,7 +7,7 @@ int number = 0;
 std::mutex additionInProgress;
   
 // function to increment the number 
-void increment(){ 
+void increment(const char* name){ 
       
     // increment number by 1 for 1000000 times 
     for(int i=0; i<1000000; i++){ 
@@ -19,13 +19,11 @@ void increment(){
 
 int main(){
     float num_1, num_2, result;
-    std::thread t1(increment);
-    std::thread t2(increment);
-    
+    std::thread olivia(increment, "Olivia");
+    std::thread jay(increment, "Jay");
 
-
-    t1.join(); 
-    t2.join(); 
+    olivia.join(); 
+    jay.join(); 
     std::cout << "The result of the addition is: " << number << std::endl;
     
     std::cout << std::endl << std::endl;
