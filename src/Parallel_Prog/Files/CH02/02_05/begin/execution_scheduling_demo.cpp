@@ -12,6 +12,7 @@ void vegetable_chopper(const char* name) {
         vegetable_count++;
     }
     printf("%s chopped %u vegetables.\n", name, vegetable_count);
+#include <iostream> 
 }
 
 int main() {
